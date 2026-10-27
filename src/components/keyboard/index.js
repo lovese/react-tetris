@@ -87,11 +87,11 @@ export default class Keyboard extends React.Component {
           size="s1"
           top={8}
           left={136}
-          label={i18n.rotation[lan]}
+          label={i18n.drop[lan]}
           arrow="translate(0, -10px)"
           position
-          active={keyboard.get('rotate')}
-          ref={(c) => { this.dom_rotate = c; }}
+          active={keyboard.get('drop')}
+          ref={(c) => { this.dom_space = c; }}
         />
         <Button
           color="blue"
@@ -128,9 +128,9 @@ export default class Keyboard extends React.Component {
           size="s0"
           top={140}
           left={395}
-          label={i18n.drop[lan]}
-          active={keyboard.get('drop')}
-          ref={(c) => { this.dom_space = c; }}
+          label={i18n.rotation[lan]}
+          active={keyboard.get('rotate')}
+          ref={(c) => { this.dom_rotate = c; }}
         />
         <Button
           color="red"

@@ -3,15 +3,15 @@ import todo from './todo';
 
 const keyboard = {
   37: 'left', // ArrowLeft (左移)
-  38: 'rotate', // ArrowUp -> 旋转 (Rotate)
+  38: 'space', // ArrowUp -> 掉落 (Drop / 硬降)
   39: 'right', // ArrowRight (右移)
   40: 'down', // ArrowDown (下移)
-  32: 'space', // Space -> 掉落 (Drop)
+  32: 'rotate', // Space -> 旋转 (Rotate / 变形)
 
   // 扩展直觉按键
   65: 'left', // A (左移)
   68: 'right', // D (右移)
-  87: 'rotate', // W (上 -> 旋转)
+  87: 'space', // W (上 -> 掉落)
   90: 'rotate', // Z (旋转)
   88: 'rotate', // X (旋转)
   75: 'rotate', // K (旋转)
