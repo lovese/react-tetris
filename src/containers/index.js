@@ -23,9 +23,16 @@ import states from '../control/states';
 class App extends React.Component {
   constructor() {
     super();
+    const getW = () => window.innerWidth || document.documentElement.clientWidth;
+    const getH = () => {
+      if (typeof window !== 'undefined' && window.navigator && window.navigator.standalone) {
+        return window.screen.height;
+      }
+      return (typeof window !== 'undefined' && window.innerHeight) || document.documentElement.clientHeight;
+    };
     this.state = {
-      w: document.documentElement.clientWidth,
-      h: document.documentElement.clientHeight,
+      w: getW(),
+      h: getH(),
     };
   }
   componentWillMount() {
@@ -54,10 +61,11 @@ class App extends React.Component {
     }
   }
   resize() {
-    this.setState({
-      w: document.documentElement.clientWidth,
-      h: document.documentElement.clientHeight,
-    });
+    const w = window.innerWidth || document.documentElement.clientWidth;
+    const h = (window.navigator && window.navigator.standalone)
+      ? window.screen.height
+      : (window.innerHeight || document.documentElement.clientHeight);
+    this.setState({ w, h });
   }
   render() {
     let filling = 0;

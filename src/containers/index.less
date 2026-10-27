@@ -12,6 +12,12 @@ body{
   text-align: left;
 }
 
+@media (max-width: 768px), all and (display-mode: standalone) {
+  html, body {
+    background: #efcc19 !important; /* 手机端背景直接与掌机金黄机身一致，彻底消除任何底部/边缘漏边 */
+  }
+}
+
 :global{
 
   .r{
