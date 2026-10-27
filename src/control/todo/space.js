@@ -49,7 +49,9 @@ const down = (store) => {
         }, 100);
         states.nextAround(matrix);
       } else {
-        states.start();
+        let startLines = state.get('startLines');
+        startLines = startLines + 1 > 10 ? 0 : startLines + 1;
+        store.dispatch(actions.startLines(startLines));
       }
     },
   });
