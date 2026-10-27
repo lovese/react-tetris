@@ -3,20 +3,20 @@ import todo from './todo';
 
 const keyboard = {
   37: 'left', // ArrowLeft (左移)
-  38: 'space', // ArrowUp -> 掉落 (Drop / 硬降)
+  38: 'rotate', // ArrowUp -> 旋转 (Rotate)
   39: 'right', // ArrowRight (右移)
-  40: 'down', // ArrowDown (下移 / 软降)
-  32: 'rotate', // Space -> 变形 (Rotate / 旋转)
+  40: 'down', // ArrowDown (下移)
+  32: 'space', // Space -> 掉落 (Drop)
 
-  // 扩展更符合直觉的按键方案 (WASD / 经典动作键)
+  // 扩展直觉按键
   65: 'left', // A (左移)
   68: 'right', // D (右移)
-  87: 'space', // W (上 -> 掉落)
-  90: 'rotate', // Z (经典俄罗斯方块变形)
-  88: 'rotate', // X (经典俄罗斯方块变形)
-  75: 'rotate', // K (变形)
-  74: 'space', // J (快速掉落)
-  67: 'space', // C (快速掉落)
+  87: 'rotate', // W (上 -> 旋转)
+  90: 'rotate', // Z (旋转)
+  88: 'rotate', // X (旋转)
+  75: 'rotate', // K (旋转)
+  74: 'space', // J (掉落)
+  67: 'space', // C (掉落)
 
   // 系统快捷键
   83: 's', // S (声音)
