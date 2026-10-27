@@ -1,0 +1,15 @@
+{
+  "name": "俄罗斯方块",
+  "short_name": "俄罗斯方块",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#009688",
+  "theme_color": "#009688",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    }
+  ]
+}

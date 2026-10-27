@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta name="description" content="使用React、Redux、Immutable制作的俄罗斯方块" />
     <meta name="keywords" content="俄罗斯方块,Tetris,React,Redux,Immuatble,JavaScript">
     <meta name="format-detection" content="telephone=no"/>
-    <script>;(function(){var w=parseInt(window.screen.width),s=w/640,u=navigator.userAgent.toLowerCase(),m='<meta name="viewport" content="width=640,';if(/android (\d+\.\d+)/.test(u)){if(parseFloat(RegExp.$1)>2.3)m+='minimum-scale='+s+',maximum-scale='+s+',';}else{m+='user-scalable=no,';}m+='target-densitydpi=device-dpi">';document.write(m);}());</script>
-    <meta charset="UTF-8">
+    <!-- iOS 全屏 Web App 支持与沉浸式状态栏覆盖 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="俄罗斯方块">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#009688">
+    <link rel="apple-touch-icon" href="./icon.png">
+    <link rel="apple-touch-icon-precomposed" href="./icon.png">
+    <link rel="shortcut icon" href="./icon.png">
+    <link rel="manifest" href="./manifest.json">
+    <script>;(function(){var w=parseInt(window.screen.width),s=w/640,u=navigator.userAgent.toLowerCase(),m='<meta name="viewport" content="width=640,viewport-fit=cover,';if(/android (\d+\.\d+)/.test(u)){if(parseFloat(RegExp.$1)>2.3)m+='minimum-scale='+s+',maximum-scale='+s+',';}else{m+='user-scalable=no,';}m+='target-densitydpi=device-dpi">';document.write(m);}());</script>
     <title>俄罗斯方块</title>
     <link href="./loader.css" rel="stylesheet" />
 </head>
