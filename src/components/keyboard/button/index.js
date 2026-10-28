@@ -24,7 +24,7 @@ export default class Button extends React.Component {
         />
         { size === 's1' && <em
           style={{
-            [transform]: `${arrow} scale(1,2)`,
+            [transform]: arrow,
           }}
         /> }
         <span className={cn({ [style.position]: position })}>{label}</span>
