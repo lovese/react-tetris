@@ -1,5 +1,5 @@
 ### 中文介绍
-请查看 [README.md](https://github.com/chvin/react-tetris/blob/master/README.md)
+请查看 [README.md](https://github.com/lovese/react-tetris/blob/master/README.md)
 
 ----
 ## Use React, Redux, Immutable to code Tetris.
@@ -7,7 +7,7 @@
 ----
 Tetris is a classic game that has always been enthusiastically implemented in various languages. There are many versions of it in Javascript, and using React to do Tetris has become my goal.
 
-Open [https://chvin.github.io/react-tetris/?lan=en](https://chvin.github.io/react-tetris/?lan=en) to play!
+Open [https://lovese.github.io/react-tetris/?lan=en](https://lovese.github.io/react-tetris/?lan=en) to play!
 
 ----
 ### Interface preview
@@ -234,7 +234,7 @@ npm start
 ```
 The browser will go to [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
 ### multi-language
-In the [i18n.json](https://github.com/chvin/react-tetris/blob/master/i18n.json) is the configuration for the multi-language environment. You can change the language by passing the url parameter `lan` like this: `https://chvin.github.io/react-tetris/?lan=en`
+In the [i18n.json](https://github.com/lovese/react-tetris/blob/master/i18n.json) is the configuration for the multi-language environment. You can change the language by passing the url parameter `lan` like this: `https://lovese.github.io/react-tetris/?lan=en`
 ### Build
 ```
 npm run build
