@@ -115,7 +115,7 @@ React has a big trick when it comes to performance tuning. It uses `shouldCompon
 
 If we don't return a new object when making state updates, we would have to use `deepCopy` and `deepCompare` to calculate if the new state is equal to the previous one, the consumption of the performance is not worth it. With Immutable.js, it's easy to compare deep structures using the method above.
 
-For Tetris, imagine that the board is a `two-dimensional array`. The square that can be moved is `shape (also a two-dimensional array) + coordinates`. The superposition of the board and the box is composed of the final result of `Matrix`. The properties above are built by `Immutable.js`, through its comparison method, you can easily write `shouldComponentUpdate`. Source Code:[/src/components/matrix/index.js#L35](https://github.com/chvin/react-tetris/blob/master/src/components/matrix/index.js#L35)
+For Tetris, imagine that the board is a `two-dimensional array`. The square that can be moved is `shape (also a two-dimensional array) + coordinates`. The superposition of the board and the box is composed of the final result of `Matrix`. The properties above are built by `Immutable.js`, through its comparison method, you can easily write `shouldComponentUpdate`. Source Code:[/src/components/matrix/index.js#L35](https://github.com/lovese/react-tetris/blob/master/src/components/matrix/index.js#L35)
 
 Immutable learning materials:
 * [Immutable.js](http://facebook.github.io/immutable-js/)
@@ -163,7 +163,7 @@ export default connect(mapStateToProps)(App);
 
 ----
 ## 3. Web Audio Api
-There are many different sound effects in the game, but in fact we keep only a reference to a sound file: [/build/music.mp3](https://github.com/chvin/react-tetris/blob/master/build/music.mp3). With the help of `Web Audio Api`, you can play audio in millisecond precision, with a high frequency, which is not possible with the `<audio>` tag. Press the arrow keys to move the box while the game is in progress, you can hear high-frequency sound.
+There are many different sound effects in the game, but in fact we keep only a reference to a sound file: [/build/music.mp3](https://github.com/lovese/react-tetris/blob/master/build/music.mp3). With the help of `Web Audio Api`, you can play audio in millisecond precision, with a high frequency, which is not possible with the `<audio>` tag. Press the arrow keys to move the box while the game is in progress, you can hear high-frequency sound.
 
 ![Web audio advanced](https://img.alicdn.com/tps/TB1fYgzNXXXXXXnXpXXXXXXXXXX-633-358.png)
 
@@ -172,7 +172,7 @@ There are many different sound effects in the game, but in fact we keep only a r
 ![Process](https://img.alicdn.com/tps/TB1nBf1NXXXXXagapXXXXXXXXXX-520-371.png)
 
 Where `Source` represents an audio source, `Destination` represents the final output. Multiple Sources compose the Destination.
-Source Code:[/src/unit/music.js](https://github.com/chvin/react-tetris/blob/master/src/unit/music.js). To achieve ajax loading mp3, and to WAA, control the playback process.
+Source Code:[/src/unit/music.js](https://github.com/lovese/react-tetris/blob/master/src/unit/music.js). To achieve ajax loading mp3, and to WAA, control the playback process.
 
 `WAA` is supported in the latest 2 versions of each browser([CanIUse](http://caniuse.com/#search=webaudio))
 
@@ -188,9 +188,9 @@ Web Audio Api learning materials:
 ----
 ## 4. Game on the experience of optimization
 * Experience:
-	* Press the arrow keys to move vertically and horizontally. The trigger frequency is different, the game can define the trigger frequency, instead of the original event frequency, the source code:[/src/unit/event.js](https://github.com/chvin/react-tetris/blob/master/src/unit/event.js) ;
+	* Press the arrow keys to move vertically and horizontally. The trigger frequency is different, the game can define the trigger frequency, instead of the original event frequency, the source code:[/src/unit/event.js](https://github.com/lovese/react-tetris/blob/master/src/unit/event.js) ;
 	* Left and right to move the delay can drop the speed, but when moving in the wall smaller delay; in the speed of 6 through the delay will ensure a complete horizontal movement in a row;
-	* The `touchstart` and `mousedown` events are also registered for the button for responsive games. When `touchstart` occurs, `mousedown` is not triggered, and when `mousedown` occurs, the `mouseup` simulator `mouseup` will also be listened to as `mouseup`, since the mouse-removed event element can not fire. Source Code:[/src/components/keyboard/index.js](https://github.com/chvin/react-tetris/blob/master/src/components/keyboard/index.js);
+	* The `touchstart` and `mousedown` events are also registered for the button for responsive games. When `touchstart` occurs, `mousedown` is not triggered, and when `mousedown` occurs, the `mouseup` simulator `mouseup` will also be listened to as `mouseup`, since the mouse-removed event element can not fire. Source Code:[/src/components/keyboard/index.js](https://github.com/lovese/react-tetris/blob/master/src/components/keyboard/index.js);
 	* The `visibilitychange` event, when the page is hidden\switch, the game will not proceed, switch back and it will continue, the `focus` state has also been written into the Redux. So when playing with the phone and the phone has a `call`, the progress of the game will be saved; PC open the game do not hear any other gameover, which is a bit like `ios` application switch;
 	* In the game `any` time you refresh the page, (such as the closing the tab or the end of the game) can restore the current state;
 	* The only pictures used in the game are ![image](https://img.alicdn.com/tps/TB1qq7kNXXXXXacXFXXXXXXXXXX-400-186.png), all the rest is CSS;
@@ -206,7 +206,7 @@ Web Audio Api learning materials:
 * `shouldComponentUpdate` is written for all react components, which on the phone causes a significant performance improvement. For Large and medium-sized applications when facing performance problems, try writing your own  `shouldComponentUpdate`, it will most probably help you.
 * `Stateless Functional Components`([Stateless Functional Components](https://medium.com/@joshblack/stateless-components-in-react-0-14-f9798f8b992d#.xjqnbfx4e)) has no lifecycle hooks. And because all components need to write the life cycle hook `shouldComponentUpdate`, they are not used.
 * In the `webpack.config.js` `devServer` attribute is written `host: '0.0.0.0'`, but you can be use in the development any other ip, not limited to localhost;
-* Redux in the `store` not only connect to the method passed to `container`, you can jump out of the component, in other documents out to do flow control (dispatch), the source code:[/src/control/states.js](https://github.com/chvin/react-tetris/blob/master/src/control/states.js)；
+* Redux in the `store` not only connect to the method passed to `container`, you can jump out of the component, in other documents out to do flow control (dispatch), the source code:[/src/control/states.js](https://github.com/lovese/react-tetris/blob/master/src/control/states.js)；
 * Dealing with persistence in React + Redux is very convenient, as long as the redux state of storage, reducers do read in each of the initialization time.
 * By configuring `.eslintrc.js` and `webpack.config.js`, the `ESLint` test is integrated in the project. Using ESLint allows coding to be written to specifications, effectively controlling code quality. Code that does not conform to the specifications can be found through the IDE and the console at development time (or build time). reference:[Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)；
 
