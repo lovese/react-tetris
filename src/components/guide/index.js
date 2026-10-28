@@ -37,23 +37,31 @@ export default class Guide extends React.Component {
         <div className={`${style.guide} ${style.left}`}>
           <p>
             <a href="https://github.com/lovese/react-tetris" rel="noopener noreferrer" target="_blank" title={i18n.linkTitle[lan]}>{`${i18n.github[lan]}:`}</a><br />
-            <iframe
-              src="https://ghbtns.com/github-btn.html?user=lovese&repo=react-tetris&type=star&count=true"
-              frameBorder="0"
-              scrolling="0"
-              width="170px"
-              height="20px"
-              style={{ [transform]: 'scale(1.68)', [`${transform}Origin`]: 'center left' }}
-            />
+            <a
+              href="https://github.com/lovese/react-tetris"
+              rel="noopener noreferrer"
+              target="_blank"
+              style={{ display: 'inline-block', marginTop: '20px', height: '20px', [transform]: 'scale(1.68)', [`${transform}Origin`]: 'center left' }}
+            >
+              <img
+                src="https://img.shields.io/github/stars/lovese/react-tetris?style=social"
+                alt="GitHub stars"
+                style={{ height: '20px', verticalAlign: 'top' }}
+              />
+            </a>
             <br />
-            <iframe
-              src="https://ghbtns.com/github-btn.html?user=lovese&repo=react-tetris&type=fork&count=true"
-              frameBorder="0"
-              scrolling="0"
-              width="170px"
-              height="20px"
-              style={{ [transform]: 'scale(1.68)', [`${transform}Origin`]: 'center left' }}
-            />
+            <a
+              href="https://github.com/lovese/react-tetris/fork"
+              rel="noopener noreferrer"
+              target="_blank"
+              style={{ display: 'inline-block', marginTop: '20px', height: '20px', [transform]: 'scale(1.68)', [`${transform}Origin`]: 'center left' }}
+            >
+              <img
+                src="https://img.shields.io/github/forks/lovese/react-tetris?style=social"
+                alt="GitHub forks"
+                style={{ height: '20px', verticalAlign: 'top' }}
+              />
+            </a>
           </p>
           <div className={style.up}>
             <em style={{ [transform]: 'translate(0,-3px) scale(1,2)' }} />
