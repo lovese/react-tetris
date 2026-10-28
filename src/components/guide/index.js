@@ -36,9 +36,9 @@ export default class Guide extends React.Component {
       <div style={{ display: this.state.isMobile ? 'none' : 'block' }}>
         <div className={`${style.guide} ${style.left}`}>
           <p>
-            <a href="https://github.com/chvin/react-tetris" rel="noopener noreferrer" target="_blank" title={i18n.linkTitle[lan]}>{`${i18n.github[lan]}:`}</a><br />
+            <a href="https://github.com/lovese/react-tetris" rel="noopener noreferrer" target="_blank" title={i18n.linkTitle[lan]}>{`${i18n.github[lan]}:`}</a><br />
             <iframe
-              src="https://ghbtns.com/github-btn.html?user=chvin&repo=react-tetris&type=star&count=true"
+              src="https://ghbtns.com/github-btn.html?user=lovese&repo=react-tetris&type=star&count=true"
               frameBorder="0"
               scrolling="0"
               width="170px"
@@ -47,7 +47,7 @@ export default class Guide extends React.Component {
             />
             <br />
             <iframe
-              src="https://ghbtns.com/github-btn.html?user=chvin&repo=react-tetris&type=fork&count=true"
+              src="https://ghbtns.com/github-btn.html?user=lovese&repo=react-tetris&type=fork&count=true"
               frameBorder="0"
               scrolling="0"
               width="170px"
