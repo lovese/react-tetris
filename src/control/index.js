@@ -1,5 +1,6 @@
 import store from '../store';
 import todo from './todo';
+import { initGamepad } from './gamepad';
 
 const keyboard = {
   37: 'left', // ArrowLeft (左移)
@@ -54,4 +55,6 @@ const keyUp = (e) => {
 
 document.addEventListener('keydown', keyDown, true);
 document.addEventListener('keyup', keyUp, true);
+
+initGamepad();
 
