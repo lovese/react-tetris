@@ -7,7 +7,7 @@ Please view [README-EN.md](https://github.com/lovese/react-tetris/blob/master/RE
 ----
 俄罗斯方块是一直各类程序语言热衷实现的经典游戏，JavaScript的实现版本也有很多，用React 做好俄罗斯方块则成了我一个目标。
 
-戳：[https://lovese.github.io/react-tetris/?lan=zh](https://lovese.github.io/react-tetris/?lan=zh) 玩一玩！
+戳：[https://lovese.github.io/react-tetris/](https://lovese.github.io/react-tetris/) 玩一玩！
 
 ----
 ### 效果预览
@@ -230,7 +230,7 @@ npm start
 ```
 浏览自动打开 [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
 ### 多语言
-在 [i18n.json](https://github.com/lovese/react-tetris/blob/master/i18n.json) 配置多语言环境，使用"lan"参数匹配语言如：`https://lovese.github.io/react-tetris/?lan=zh`
+在 [i18n.json](https://github.com/lovese/react-tetris/blob/master/i18n.json) 配置多语言环境，使用"lan"参数匹配语言如：`https://lovese.github.io/react-tetris/`
 ### 打包编译
 ```
 npm run build
